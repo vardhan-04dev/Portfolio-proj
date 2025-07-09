@@ -1,0 +1,47 @@
+body {
+  padding: 0rem;
+  margin: 0rem;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: column;
+  z-index: 1;
+}
+.back-vid {
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+header {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 70px;
+  background-color: #050608;
+  box-shadow: crimson;
+  border-radius: 50px;
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-vid {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  .back-vid {
+    width: 100%;
+    height: auto;
+  }
+}
